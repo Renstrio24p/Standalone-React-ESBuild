@@ -9,7 +9,7 @@ export default function ReactApp() {
             <img src="images/react.svg" className="react"></img>
           </a>
           <div className="react-text">
-            <h1 className="react-header">Standalone React</h1>
+            <h1 className="react-header">Standalone React TS</h1>
             <p className="react-pgraph">
               <span className="react-title">
                 Make your life simple and organize  with{" "}
