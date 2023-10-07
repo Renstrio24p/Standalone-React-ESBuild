@@ -1,0 +1,21 @@
+{
+  "name": "standalone-react-esbuild",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"esbuild src/index.jsx --bundle --minify --sourcemap --loader:.css=file --outfile=serve/bundle.js --watch\" \"npx lite-server\" \"rmdir /s /q dist\" ",
+    "build":"node build.js",
+    "clean": "rmdir /s /q dist"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "esbuild": "^0.19.4",
+    "nodemon": "^3.0.1"
+  }
+}
