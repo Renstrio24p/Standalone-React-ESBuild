@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "concurrently \"esbuild src/index.jsx --bundle --minify --sourcemap --loader:.css=file --outfile=serve/bundle.js --watch\" \"npx lite-server\" \"rmdir /s /q dist\" ",
-    "build":"node build.js",
+    "build": "if not exist node_modules (echo 'node_modules directory does not exist') else (echo 'node_modules directory exists') && (if exist dist (rmdir /s /q dist) else echo 'dist directory does not exist') && robocopy .\\ dist /E /XD node_modules dist .github .git /XF esbuild.config.js package.json yarn.lock build.js /W:0 /R:0",
     "clean": "rmdir /s /q dist"
   },
   "dependencies": {
